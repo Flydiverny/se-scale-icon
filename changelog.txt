@@ -1,0 +1,8 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2021-07-27
+  Changes:
+    - Initial version!
+    - Scaling icon for all Space Exploration assembly machines
+    - Scale Cargo rocket launch pad and landing pad inventory
+    - Hide alt mode info from hidden launch pad entities (fuel tank, constant combinator)

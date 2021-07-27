@@ -1,0 +1,10 @@
+{
+  "name": "se-scale-icon",
+  "version": "0.1.0",
+  "title": "Scale Icon for SE",
+  "author": "Flydiverny",
+  "homepage": "https://github.com/Flydiverny/se-scale-icon",
+  "dependencies": ["base >= 1.1.0", "space-exploration"],
+  "description": "Scales the crafting icon on top of space manufactory and other large buildings.",
+  "factorio_version": "1.1"
+}
