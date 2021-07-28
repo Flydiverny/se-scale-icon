@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2021-07-28
+  Changes:
+    - Update title from "Scale Icon for SE" to "Scale Icons for Space Exploration"
+    - Add license in release
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2021-07-27
   Changes:
