@@ -1,0 +1,7 @@
+.git
+.makeignore
+.gitignore
+Makefile
+gallery
+dist
+*.zip
