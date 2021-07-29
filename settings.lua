@@ -28,4 +28,17 @@ data:extend({{
     setting_type = "startup",
     default_value = true,
     order = "a33"
+}, {
+    type = "bool-setting",
+    name = "ssi-override-requester-paste-multiplier",
+    setting_type = "startup",
+    default_value = false,
+    order = "a41"
+}, {
+    type = "int-setting",
+    name = "ssi-override-requester-paste-multiplier-value",
+    setting_type = "startup",
+    default_value = 0,
+    minimum_value = 0,
+    order = "a42"
 }})

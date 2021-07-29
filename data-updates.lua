@@ -4,6 +4,15 @@ function string.starts(String, Start)
     return string.sub(String, 1, string.len(Start)) == Start
 end
 
+function table.contains(table, element)
+    for _, value in pairs(table) do
+        if value == element then
+            return true
+        end
+    end
+    return false
+end
+
 function getSetting(setting)
     if settings["startup"][setting] then
         return settings["startup"][setting].value
@@ -37,4 +46,23 @@ end
 -- Hide alt mode info from fuel tank
 if getSetting("ssi-hide-launch-pad-tank") then
     table.insert(data.raw["storage-tank"][se_prefix .. "rocket-launch-pad-tank"].flags, "hide-alt-info")
+end
+
+if getSetting("ssi-override-requester-paste-multiplier") then
+    local buildingtypes = {"assembling-machine", "furnace", "lab", "mining-drill", "rocket-silo"}
+
+    for _, buildingtype in pairs(buildingtypes) do
+        for _, entity in pairs(data.raw[buildingtype]) do
+            if string.starts(entity.name, se_prefix) then
+                if table.contains(entity.flags, "player-creation") then
+                    if data.raw.recipe[entity.name] then
+                        if not data.raw.recipe[entity.name].requester_paste_multiplier then
+                            data.raw.recipe[entity.name].requester_paste_multiplier = getSetting(
+                                "ssi-override-requester-paste-multiplier-value")
+                        end
+                    end
+                end
+            end
+        end
+    end
 end
